@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.1.1] - 2026-11-15
+
+### Added
+
+- Translations: the manager loads its text domain from `languages/`, with a Norwegian Bokmål
+  (nb_NO) translation and `composer run i18n` to regenerate them.
+
+### Fixed
+
+- The add-on descriptions can now be translated.
+
 ## [0.1.0] - 2026-11-15
 
 ### Added

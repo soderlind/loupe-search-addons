@@ -1,0 +1,104 @@
+/* Card grid with equal-height rows, styled after the Virtual Media Folders add-on manager. */
+.loupe-addons-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-top: 16px;
+}
+
+.loupe-addons-toolbar p {
+	margin: 0;
+}
+
+.loupe-addons-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.loupe-addons-card {
+	display: flex;
+	flex-direction: column;
+	background: var(--wpds-color-background-surface-neutral-strong, #fff);
+	border: 1px solid var(--wpds-color-stroke-surface-neutral, #dbdbdb);
+	border-radius: var(--wpds-border-radius-md, 4px);
+}
+
+.loupe-addons-card-top {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.loupe-addons-card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.loupe-addons-card-header h3 {
+	margin: 0;
+	font-size: 14px;
+}
+
+.loupe-addons-card-actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 6px;
+	flex-shrink: 0;
+}
+
+.loupe-addons-card-actions form {
+	margin: 0;
+}
+
+.loupe-addons-card-desc {
+	flex: 1 1 auto;
+	margin: 0;
+	color: var(--wpds-color-foreground-content-neutral-weak, #707070);
+	font-size: 13px;
+}
+
+.loupe-addons-card-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 20px;
+	border-top: 1px solid var(--wpds-color-stroke-surface-neutral, #dbdbdb);
+	background: var(--wpds-color-background-surface-neutral-weak, #f4f4f4);
+	font-size: 13px;
+}
+
+.loupe-addons-links {
+	display: flex;
+	gap: 6px;
+	flex-shrink: 0;
+}
+
+.loupe-addons-update-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	background: var(--wpds-color-background-surface-error-weak, #fff6f5);
+	border: 1px solid var(--wpds-color-stroke-surface-error-strong, #cc1818);
+	border-radius: var(--wpds-border-radius-sm, 2px);
+	color: var(--wpds-color-foreground-content-error-weak, #cc1818);
+	font-size: 12px;
+}
+
+.loupe-addons-error {
+	display: block;
+	color: var(--wpds-color-foreground-content-error-weak, #cc1818);
+}
+
+@media screen and (max-width: 1100px) {
+	.loupe-addons-grid {
+		grid-template-columns: 1fr;
+	}
+}

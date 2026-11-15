@@ -1,0 +1,45 @@
+name: On Release, Build release zip
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Build release zip
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Lint PHP
+        run: find . -name "*.php" -not -path "./vendor/*" -not -path "./node_modules/*" -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Install production dependencies
+        run: composer install --no-dev --optimize-autoloader --no-interaction
+
+      - name: Stage release files
+        run: |
+          mkdir -p /tmp/loupe-search-addons
+          rsync -a \
+            --exclude=".git/" \
+            --exclude="node_modules/" \
+            --exclude-from=".distignore" \
+            . /tmp/loupe-search-addons/
+          test -f /tmp/loupe-search-addons/loupe-search-addons.php
+          test -f /tmp/loupe-search-addons/vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php
+          test -f /tmp/loupe-search-addons/vendor/soderlind/wordpress-github-updater/src/GitHubUpdater.php
+
+      - name: Archive Release
+        working-directory: /tmp
+        run: zip -r ${{ github.workspace }}/loupe-search-addons.zip loupe-search-addons/
+
+      - name: Upload zip to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" \
+            loupe-search-addons.zip \
+            --clobber

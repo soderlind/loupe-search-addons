@@ -131,6 +131,8 @@ final class Manager {
 			],
 			admin_url( 'admin-ajax.php' )
 		);
+		/* translators: %s: add-on name. */
+		$details_label = sprintf( __( 'More information about %s', 'loupe-search-addons' ), $addon['title'] );
 		?>
 		<div class="loupe-addons-card">
 			<div class="loupe-addons-card-top">
@@ -168,7 +170,7 @@ final class Manager {
 					?>
 				</span>
 				<span class="loupe-addons-links">
-					<a href="<?php echo esc_url( $details ); ?>" class="thickbox open-plugin-details-modal" aria-label="<?php /* translators: %s: add-on name. */ echo esc_attr( sprintf( __( 'More information about %s', 'loupe-search-addons' ), $addon['title'] ) ); ?>"><?php esc_html_e( 'Details', 'loupe-search-addons' ); ?></a>
+					<a href="<?php echo esc_url( $details ); ?>" class="thickbox open-plugin-details-modal" aria-label="<?php echo esc_attr( $details_label ); ?>"><?php esc_html_e( 'Details', 'loupe-search-addons' ); ?></a>
 					<span aria-hidden="true">|</span>
 					<a href="<?php echo esc_url( $addon['repo_url'] ); ?>" target="_blank" rel="noopener noreferrer">GitHub</a>
 				</span>

@@ -25,6 +25,16 @@
 		"sort-packages": true
 	},
 	"scripts": {
-		"test": "phpunit"
+		"test": "phpunit",
+		"i18n": [
+			"@i18n:make-pot",
+			"@i18n:update-po",
+			"@i18n:make-mo",
+			"@i18n:make-php"
+		],
+		"i18n:make-pot": "wp i18n make-pot . languages/loupe-search-addons.pot --exclude=vendor,tests --domain=loupe-search-addons",
+		"i18n:update-po": "wp i18n update-po languages/loupe-search-addons.pot languages/",
+		"i18n:make-mo": "wp i18n make-mo languages/",
+		"i18n:make-php": "wp i18n make-php languages/"
 	}
 }

@@ -50,7 +50,10 @@ stay active.
 ```sh
 composer install
 composer test
+composer run i18n   # Regenerate languages/*.pot and compile the translations (needs WP-CLI)
 ```
+
+Translations are in `languages/`. Norwegian Bokmål (nb_NO) is included.
 
 ## License
 

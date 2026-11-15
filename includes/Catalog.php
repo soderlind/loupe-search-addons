@@ -13,16 +13,13 @@ final class Catalog {
 
 	private const ITEMS = [
 		'loupe-search-block'        => [
-			'title'       => 'Loupe Search Block',
-			'description' => 'A search block with instant results as you type, powered by Loupe Search.',
+			'title' => 'Loupe Search Block',
 		],
 		'loupe-semantic-search'     => [
-			'title'       => 'Loupe Semantic Search',
-			'description' => 'Adds meaning-based retrieval to Loupe Search, so visitors find posts that match what they mean, not only the words they type.',
+			'title' => 'Loupe Semantic Search',
 		],
 		'loupe-search-multilingual' => [
-			'title'       => 'Loupe Search Multilingual',
-			'description' => 'One Loupe Search index per language for sites translated with Polylang or WPML, with stemming and stop words for each language.',
+			'title' => 'Loupe Search Multilingual',
 		],
 	];
 
@@ -50,6 +47,7 @@ final class Catalog {
 		}
 		$repo = self::OWNER . '/' . $slug;
 		return self::ITEMS[ $slug ] + [
+			'description' => self::description( $slug ),
 			'slug'        => $slug,
 			'plugin_file' => $slug . '/' . $slug . '.php',
 			'repo'        => $repo,
@@ -68,5 +66,14 @@ final class Catalog {
 	public static function for_plugin_file( string $plugin_file ): ?array {
 		$addon = self::get( dirname( $plugin_file ) );
 		return ( $addon && $addon['plugin_file'] === $plugin_file ) ? $addon : null;
+	}
+
+	private static function description( string $slug ): string {
+		return match ( $slug ) {
+			'loupe-search-block'        => __( 'A search block with instant results as you type, powered by Loupe Search.', 'loupe-search-addons' ),
+			'loupe-semantic-search'     => __( 'Adds meaning-based retrieval to Loupe Search, so visitors find posts that match what they mean, not only the words they type.', 'loupe-search-addons' ),
+			'loupe-search-multilingual' => __( 'One Loupe Search index per language for sites translated with Polylang or WPML, with stemming and stop words for each language.', 'loupe-search-addons' ),
+			default                     => '',
+		};
 	}
 }

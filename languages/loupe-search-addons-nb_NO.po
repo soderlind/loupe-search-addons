@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Loupe Search Add-ons 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/loupe-search-addons\n"
+"Last-Translator: Per Soderlind\n"
+"Language-Team: Norwegian Bokmål\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-15T20:54:51+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: nb_NO\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: loupe-search-addons\n"
+
+#. Plugin Name of the plugin
+#: loupe-search-addons.php
+#: includes/Manager.php:48
+#: includes/Manager.php:57
+msgid "Loupe Search Add-ons"
+msgstr "Loupe Search-tillegg"
+
+#. Plugin URI of the plugin
+#: loupe-search-addons.php
+msgid "https://github.com/soderlind/loupe-search-addons"
+msgstr "https://github.com/soderlind/loupe-search-addons"
+
+#. Description of the plugin
+#: loupe-search-addons.php
+msgid "Install, activate and update Loupe Search add-ons from GitHub. Add-on updates show up in WordPress' own update screens."
+msgstr "Installer, aktiver og oppdater tillegg til Loupe Search fra GitHub. Oppdateringer av tilleggene vises i WordPress sine egne oppdateringssider."
+
+#. Author of the plugin
+#: loupe-search-addons.php
+msgid "Per Soderlind"
+msgstr "Per Soderlind"
+
+#. Author URI of the plugin
+#: loupe-search-addons.php
+msgid "https://soderlind.no"
+msgstr "https://soderlind.no"
+
+#: includes/Catalog.php:73
+msgid "A search block with instant results as you type, powered by Loupe Search."
+msgstr "En søkeblokk som viser treff mens du skriver, drevet av Loupe Search."
+
+#: includes/Catalog.php:74
+msgid "Adds meaning-based retrieval to Loupe Search, so visitors find posts that match what they mean, not only the words they type."
+msgstr "Legger til betydningsbasert gjenfinning i Loupe Search, slik at besøkende finner innlegg som svarer til det de mener, ikke bare ordene de skriver."
+
+#: includes/Catalog.php:75
+msgid "One Loupe Search index per language for sites translated with Polylang or WPML, with stemming and stop words for each language."
+msgstr "Én Loupe Search-indeks per språk for nettsteder oversatt med Polylang eller WPML, med ordstammer og stoppord for hvert språk."
+
+#. translators: %d: number of add-ons with an update.
+#: includes/Manager.php:39
+#, php-format
+msgid "Add-ons (%d)"
+msgstr "Tillegg (%d)"
+
+#: includes/Manager.php:40
+msgid "Add-ons"
+msgstr "Tillegg"
+
+#: includes/Manager.php:74
+msgid "Manage add-ons"
+msgstr "Behandle tillegg"
+
+#: includes/Manager.php:99
+msgid "Add-ons extend Loupe Search. They are installed from GitHub, and their updates appear in Dashboard → Updates like any other plugin."
+msgstr "Tillegg utvider Loupe Search. De installeres fra GitHub, og oppdateringene deres vises i Kontrollpanel → Oppdateringer som for alle andre utvidelser."
+
+#: includes/Manager.php:100
+msgid "Check for updates"
+msgstr "Se etter oppdateringer"
+
+#: includes/Manager.php:104
+msgid "File changes are disabled on this site (DISALLOW_FILE_MODS), so add-ons cannot be installed, updated or deleted here."
+msgstr "Filendringer er slått av på dette nettstedet (DISALLOW_FILE_MODS), så tillegg kan ikke installeres, oppdateres eller slettes her."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:135
+#, php-format
+msgid "More information about %s"
+msgstr "Mer informasjon om %s"
+
+#: includes/Manager.php:149
+msgid "Not installed"
+msgstr "Ikke installert"
+
+#: includes/Manager.php:152
+msgid "network active"
+msgstr "aktiv i nettverket"
+
+#: includes/Manager.php:152
+msgid "not network active"
+msgstr "ikke aktiv i nettverket"
+
+#: includes/Manager.php:154
+msgid "active"
+msgstr "aktiv"
+
+#: includes/Manager.php:154
+msgid "inactive"
+msgstr "inaktiv"
+
+#. translators: 1: installed version, 2: activation state, e.g. "active".
+#: includes/Manager.php:157
+#, php-format
+msgid "Version %1$s, %2$s"
+msgstr "Versjon %1$s, %2$s"
+
+#. translators: %s: new version number.
+#: includes/Manager.php:161
+#, php-format
+msgid "%s available"
+msgstr "%s er tilgjengelig"
+
+#. translators: %s: version number.
+#: includes/Manager.php:164
+#, php-format
+msgid "latest %s"
+msgstr "nyeste %s"
+
+#. translators: %s: error message.
+#: includes/Manager.php:168
+#, php-format
+msgid "Could not check GitHub: %s"
+msgstr "Kunne ikke sjekke GitHub: %s"
+
+#: includes/Manager.php:173
+msgid "Details"
+msgstr "Detaljer"
+
+#: includes/Manager.php:192
+msgid "Install"
+msgstr "Installer"
+
+#: includes/Manager.php:197
+msgid "Update"
+msgstr "Oppdater"
+
+#: includes/Manager.php:201
+msgid "Network Deactivate"
+msgstr "Nettverksdeaktiver"
+
+#: includes/Manager.php:201
+msgid "Deactivate"
+msgstr "Deaktiver"
+
+#: includes/Manager.php:203
+msgid "Network Activate"
+msgstr "Nettverksaktiver"
+
+#: includes/Manager.php:203
+msgid "Activate"
+msgstr "Aktiver"
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:209
+#, php-format
+msgid "Delete %s and its files? Sites that have activated it will lose it."
+msgstr "Slette %s og filene? Nettsteder som har aktivert tillegget, mister det."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:211
+#, php-format
+msgid "Delete %s and its files?"
+msgstr "Slette %s og filene?"
+
+#: includes/Manager.php:212
+msgid "Delete"
+msgstr "Slett"
+
+#: includes/Manager.php:235
+msgid "You are not allowed to manage Loupe Search add-ons."
+msgstr "Du har ikke tilgang til å behandle tillegg til Loupe Search."
+
+#. translators: %s: comma-separated add-on names.
+#: includes/Manager.php:245
+#, php-format
+msgid "Could not reach GitHub for: %s. Showing the last known releases."
+msgstr "Fikk ikke kontakt med GitHub for: %s. Viser de sist kjente utgivelsene."
+
+#: includes/Manager.php:247
+msgid "Checked GitHub for add-on updates."
+msgstr "Sjekket GitHub etter oppdateringer av tillegg."
+
+#: includes/Manager.php:259
+msgid "Unknown add-on action."
+msgstr "Ukjent handling for tillegg."
+
+#: includes/Manager.php:262
+msgid "You are not allowed to do that."
+msgstr "Du har ikke tilgang til å gjøre det."
+
+#: includes/Manager.php:285
+msgid "You are not allowed to view add-on details."
+msgstr "Du har ikke tilgang til å se detaljer om tillegg."
+
+#: includes/Manager.php:341
+msgid "Could not rename the add-on folder."
+msgstr "Kunne ikke gi nytt navn til mappen for tillegget."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:354
+#, php-format
+msgid "%s installed. Activate it to start using it."
+msgstr "%s er installert. Aktiver tillegget for å ta det i bruk."
+
+#. translators: 1: add-on name, 2: version number.
+#: includes/Manager.php:379
+#, php-format
+msgid "%1$s updated to %2$s."
+msgstr "%1$s er oppdatert til %2$s."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:393
+#, php-format
+msgid "%s network activated."
+msgstr "%s er aktivert i nettverket."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:395
+#, php-format
+msgid "%s activated."
+msgstr "%s er aktivert."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:406
+#, php-format
+msgid "%s network deactivated."
+msgstr "%s er deaktivert i nettverket."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:408
+#, php-format
+msgid "%s deactivated."
+msgstr "%s er deaktivert."
+
+#: includes/Manager.php:417
+msgid "Deactivate the add-on before deleting it."
+msgstr "Deaktiver tillegget før du sletter det."
+
+#: includes/Manager.php:426
+msgid "WordPress could not delete the add-on files."
+msgstr "WordPress kunne ikke slette filene til tillegget."
+
+#. translators: %s: add-on name.
+#: includes/Manager.php:429
+#, php-format
+msgid "%s deleted."
+msgstr "%s er slettet."
+
+#: includes/Manager.php:454
+msgid "The add-on could not be installed or updated. Try again from the Plugins screen."
+msgstr "Tillegget kunne ikke installeres eller oppdateres. Prøv igjen fra Utvidelser-siden."
+
+#: includes/Plugin.php:37
+msgid "Loupe Search Add-ons lives in Settings → Loupe Search. Activate Loupe Search to manage its add-ons."
+msgstr "Loupe Search-tillegg finner du under Innstillinger → Loupe Search. Aktiver Loupe Search for å behandle tilleggene."
+
+#. translators: %d: HTTP status code.
+#: includes/Releases.php:116
+#, php-format
+msgid "GitHub answered with HTTP %d."
+msgstr "GitHub svarte med HTTP %d."
+
+#: includes/Releases.php:122
+msgid "GitHub did not name a latest release."
+msgstr "GitHub oppga ingen nyeste utgivelse."

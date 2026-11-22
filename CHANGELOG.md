@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.0] - 2026-11-22
+
+### Fixed
+
+- The Add-ons tab is always the last tab in Settings → Loupe Search, after the tabs other add-ons add.
+
 ## [0.1.1] - 2026-11-15
 
 ### Added

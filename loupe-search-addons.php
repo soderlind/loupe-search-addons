@@ -10,7 +10,7 @@
  * Plugin Name:       Loupe Search Add-ons
  * Plugin URI:        https://github.com/soderlind/loupe-search-addons
  * Description:       Install, activate and update Loupe Search add-ons from GitHub. Add-on updates show up in WordPress' own update screens.
- * Version:           0.1.1
+ * Version:           0.2.0
  * Author:            Per Soderlind
  * Author URI:        https://soderlind.no
  * License:           GPL-2.0+
@@ -26,7 +26,7 @@ namespace Soderlind\Plugin\LoupeSearchAddons;
 
 defined( 'ABSPATH' ) || exit;
 
-const VERSION = '0.1.1';
+const VERSION = '0.2.0';
 const FILE    = __FILE__;
 
 if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {

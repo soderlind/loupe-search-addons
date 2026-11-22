@@ -4,7 +4,7 @@ Tags: search, add-ons, updates, loupe
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.1.1
+Stable tag: 0.2.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,9 @@ Yes. The add-ons are ordinary plugins. Without this plugin, download the zip fro
 `DISALLOW_FILE_MODS` is set, or your account cannot install plugins.
 
 == Changelog ==
+
+= 0.2.0 =
+* Fixed: The Add-ons tab is always the last tab in Settings → Loupe Search.
 
 = 0.1.1 =
 * Added: Norwegian Bokmål (nb_NO) translation; the manager loads its translations from `languages/`.

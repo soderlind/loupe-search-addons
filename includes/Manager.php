@@ -19,7 +19,8 @@ final class Manager {
 		if ( is_multisite() ) {
 			add_action( 'network_admin_menu', [ self::class, 'add_network_page' ] );
 		} else {
-			add_filter( 'loupe_search_settings_tabs', [ self::class, 'add_tab' ] );
+			// Run last so the Add-ons tab follows every other add-on's tab.
+			add_filter( 'loupe_search_settings_tabs', [ self::class, 'add_tab' ], PHP_INT_MAX );
 		}
 		add_action( 'admin_post_' . self::ACTION, [ self::class, 'handle_action' ] );
 		add_action( 'wp_ajax_' . self::ACTION . '_details', [ self::class, 'details' ] );
@@ -33,6 +34,7 @@ final class Manager {
 	 */
 	public static function add_tab( array $tabs ): array {
 		$count = Updates::count();
+		unset( $tabs['addons'] );
 		$tabs['addons'] = [
 			'label'  => $count
 				/* translators: %d: number of add-ons with an update. */
